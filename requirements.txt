@@ -1,0 +1,6 @@
+Flask
+pandas
+openai
+tiktoken
+langchain
+azure-search-documents
