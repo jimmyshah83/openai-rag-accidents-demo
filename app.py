@@ -19,19 +19,14 @@ app = Flask(__name__)
 
 # Configurations for OpenAI and Azure Search
 os.environ["OPENAI_API_TYPE"] = "azure"
-# os.environ["OPENAI_API_BASE"] = "[OPENAI_ENDPOINT]"
-os.environ["OPENAI_API_BASE"] = "https://us-accidents-data-demo.openai.azure.com/"
-# os.environ["OPENAI_API_KEY"] = "[OPENAI_KEY]"
-os.environ["OPENAI_API_KEY"] = "35ee19429a5143ea885e39496c042cdc"
+os.environ["OPENAI_API_BASE"] = "[OPENAI_ENDPOINT]"
+os.environ["OPENAI_API_KEY"] = "[OPENAI_KEY]"
 os.environ["OPENAI_API_VERSION"] = "2023-05-15"
 
 embeddings: OpenAIEmbeddings = OpenAIEmbeddings(deployment="us-accidents-embedding-demo")
-# search_endpoint: str = "[SEARCH_ENDPOINT]"
-search_endpoint: str = "https://us-accidents-demo.search.windows.net"
-# search_key: str = "[SEARCH_KEY]"
-search_key: str = "0766x5ptSCsN1hMQZxNlkmFnZFFwcqmXM3gb92kYSTAzSeA6dFl7"
-# idx_name: str = "[SEARCH_IDX_NAME]"
-idx_name: str = "us-accidents-demo-idx"
+search_endpoint: str = "[SEARCH_ENDPOINT]"
+search_key: str = "[SEARCH_KEY]"
+idx_name: str = "[SEARCH_IDX_NAME]"
 
 # Read and filter data
 # Reducing to 2000 rows as the ROM for ada is 2100 
